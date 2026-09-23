@@ -1,0 +1,243 @@
+:root{
+  --bg:#f5f7fa;
+  --surface:#ffffff;
+  --text:#222;
+  --accent:#4f8a8b;
+  --border:#d9dee5;
+
+  --shadow:0 4px 12px rgba(0,0,0,.08);
+
+  --radius:12px;
+}
+
+
+.page-title{ grid-area:title; border-bottom:1px solid var(--border); padding-bottom:16px; margin-bottom:16px; }
+#about{ grid-area:about; }
+#skills{ grid-area:skills; border-left:4px solid var(--accent); padding-left:20px; align-self:start; }
+#education{ grid-area:education; align-self:start; }
+#experience{ grid-area:experience; border-left:4px solid var(--accent); padding-left:20px; align-self:start; }
+#certifications{ grid-area:certifications; border-left:4px solid var(--accent); padding-left:20px; align-self:center; }
+
+.resume-columns,
+.left-column,
+.right-column{
+  display:contents;
+}
+
+
+main.container{  /* mobile */
+  display:grid;
+  gap:25px;
+
+  grid-template-columns:1fr;
+  grid-template-areas:
+    "title"
+    "about"
+    "skills"
+    "education"
+    "certifications"
+    "experience"
+    ;
+}
+
+
+
+
+
+@media screen and (min-width:768px){ /* tablet */
+
+  main.container{
+
+    grid-template-columns:1fr 1fr;
+
+    grid-template-areas:
+      "title title"
+      "about about"
+      "skills certifications"
+      "experience education";
+  }
+
+  .page-title{
+    grid-area:title;
+  }
+
+  #about{
+    grid-area:about;
+  }
+
+  #skills{
+    grid-area:skills;
+  }
+
+  #education{
+    grid-area:education;
+  }
+
+  #experience{
+    grid-area:experience;
+  }
+
+ 
+
+  
+  .bio{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .bio img{
+    max-width: 300px;
+    width:auto;
+  }
+}
+
+
+
+
+
+main.container{
+  background:#ffffff;
+  width:min(1100px, 95%);
+  margin:0 auto;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 40px rgba(0,0,0,.3);
+
+
+}
+
+
+
+
+
+
+
+
+
+/*Actual content*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.bio{
+  display:grid;
+  gap:20px;
+}
+
+
+
+.details{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:10px 12px;
+
+  padding:18px;
+  background:#ffffff;
+  border-radius:12px;
+  border:1px solid #ffffff;
+}
+
+.details dt{
+  font-weight:700;
+  color:#444;
+  margin:0;
+}
+
+.details dd{
+  margin:0;
+  color:#222;
+}
+
+
+.related-links,
+#skills ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:block;
+}
+
+.related-links{
+  margin-top:15px;
+  border-bottom:1px solid var(--border);
+  padding-bottom:16px;
+  margin-bottom:20px;
+}
+
+.related-links li,
+#skills li{
+ 
+  padding-left:18px;
+  position:relative;
+  margin-bottom:10px;
+}
+
+.related-links li::before,
+#skills li::before{
+  content:"●";
+  color:var(--accent);
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+.skill-info{
+  display:block;
+  margin-left:18px;
+  margin-top:-8px;
+  margin-bottom:10px;
+  font-size:.85em;
+  color:#888;
+}
+
+
+
+
+.certificate-edu{
+  border-left:4px solid var(--accent);
+
+  padding-left:20px;
+
+  margin-bottom:30px;
+}
+
+.award{
+  margin-left:18px;
+  margin-top:8px;
+}
+
+.experience-description{
+  margin-bottom:6px;
+}
+
+
+#skills h2, #education h2, #experience h2 {
+  text-decoration: underline;
+}
+
+.open-sans-regular {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+a{
+  color:var(--accent);
+  text-decoration:none;
+
+  transition:0.3s;
+}
+
+a:hover{
+  color:#2d6667;
+  text-decoration:underline;
+}
