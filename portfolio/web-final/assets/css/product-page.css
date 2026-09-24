@@ -1,0 +1,161 @@
+#content {
+    padding-top: 100px;
+  
+}
+
+#content img {
+  border: 3px solid rgb(61, 0, 95);
+}
+
+
+.info-content {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  
+}
+
+.img-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: auto;
+  border: 1px solid rgb(61, 0, 95);
+}
+
+.img-side-a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: auto;
+  border: 1px solid rgb(61, 0, 95);
+}
+
+.info-text {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  z-index: 1;
+
+  background-color: rgb(242, 215, 230);
+  border-color: black;
+  border-style: dotted;
+  border-width: 6px;
+}
+
+.info-text h2 {
+  color: rgb(89, 28, 147);
+  text-align: center;
+  text-shadow: 2px 3px 5px white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tables*/
+
+.top-table {
+    padding-top: 200px;
+}
+
+.top-table caption {
+    border-top: 3px dotted grey;
+    padding-top: 200px;
+}
+
+table{
+    width:90%;
+    margin: 0 auto;
+  
+    margin-bottom: 30px;
+  
+    border:1px solid #000000;
+    border-collapse:collapse;
+  
+    }
+    caption{
+    font-weight: bold;
+    margin: 10px;
+    font-size:1.3rem;
+
+    }
+    
+    tr:nth-child(even){
+    background-color: rgba(160, 11, 240, 0.1);
+    }
+    
+    td:nth-child(n+2){
+    text-align:right;
+    }
+  
+    
+    tr:hover{
+      background-color: rgba(0, 29, 252, 0.3);
+  }
+  
+    th{
+    background-color: #763d8a;
+    color:#ffffff;
+    padding:7.5px; 
+    font-size: 1.1rem; 
+    }
+  
+    td{
+    border:1px solid #c0c0c0;
+    padding:5px;
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Gallery */
+  
+  #gallery {
+    padding-top: 175px;
+    
+  }
+  
+  #gallery h1 {
+    text-align: center;
+    font-size: 3.5rem;
+  
+  padding-bottom: 2px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 5px;
+  text-underline-position: under;
+  text-decoration-color: rgb(193, 193, 193);
+  }
+  
+  .gallery-post {
+    display:flex;
+    flex-wrap: row;
+  
+    border:none;
+    box-shadow: 0 7px 5px -6px rgb(41, 0, 47);
+  }
+  
+  .gallery-post h2 {
+    border-bottom: 3px dotted  rgb(41, 0, 47);
+  }

@@ -1,0 +1,303 @@
+:root {
+	--bg: #f5f7fa;
+	--surface: #ffffff;
+	--text: #222222;
+	--muted: #667078;
+	--accent: #4f8a8b;
+	--accent-dark: #2d6667;
+	--border: #d9dee5;
+	--shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+	--radius: 12px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+body {
+	margin: 0;
+	padding: 32px 16px;
+	background: var(--bg);
+	color: var(--text);
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.6;
+}
+
+header,main, footer {
+	width: min(1100px, 95%);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+header {
+	padding: 28px 30px 18px;
+	background: var(--surface);
+	border-radius: var(--radius) var(--radius) 0 0;
+	box-shadow: var(--shadow);
+}
+
+
+
+
+h1,h2,h3,p {
+	margin-top: 0;
+}
+
+
+
+
+h1 {
+	margin-bottom: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: clamp(1.8rem, 4vw, 2.7rem);
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+h2 {
+	margin-bottom: 20px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--border);
+	color: var(--accent-dark);
+	font-size: 1.5rem;
+}
+
+.model-instruction {
+	margin: -8px 0 20px;
+	color: var(--muted);
+	font-size: 0.85rem;
+}
+
+h2:not(:first-child) {
+	margin-top: 42px;
+}
+
+h3 {
+	margin-bottom: 4px;
+	font-size: 1.15rem;
+	line-height: 1.35;
+}
+
+
+
+
+
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+	color: var(--accent-dark);
+	text-decoration: underline;
+}
+
+
+
+
+main {
+	padding: 30px;
+	background: var(--surface);
+	box-shadow: var(--shadow);
+}
+
+
+
+
+
+.project {
+	margin-bottom: 30px;
+	padding: 0 0 4px 20px;
+	border-left: 4px solid var(--accent);
+}
+
+.project > p:not(.project-description):not(.project-skills) {
+	margin-bottom: 14px;
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+
+
+.project-description {
+	max-width: 900px;
+	margin-bottom: 12px;
+}
+
+.project-skills {
+	margin-bottom: 4px;
+}
+
+.project-skills-list {
+	margin: 0 0 0 18px;
+	padding-left: 18px;
+}
+
+.project-skills-list li::marker {
+	color: var(--accent);
+}
+
+.project-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin: 18px 0 20px;
+}
+
+.project-gallery img {
+	display: block;
+	width: min(100%, 250px);
+	height: 215px;
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	background: #eef2f3;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	object-fit: contain;
+}
+
+
+
+
+
+
+
+footer {
+	padding: 22px 10px 0;
+	color: var(--muted);
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.footer-divider {
+	margin: 0 0.35rem;
+	color: var(--border);
+}
+
+.model-viewer {
+	position: relative;
+	width: 100%;
+	height: 340px;
+	overflow: hidden;
+	margin: 18px 0 20px;
+	background: #eef2f3;
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.model-viewer.is-active {
+	cursor: grab;
+}
+
+.model-viewer.is-active:active {
+	cursor: grabbing;
+}
+
+.model-viewer canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.model-viewer-launch {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	padding: 0.75rem 1.1rem;
+	border: 1px solid var(--accent-dark);
+	border-radius: 6px;
+	background: #ffffff;
+	color: var(--accent-dark);
+	font: 600 0.95rem/1.2 sans-serif;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.model-viewer-launch:hover,
+.model-viewer-launch:focus-visible {
+	background: var(--accent-dark);
+	color: #ffffff;
+}
+
+.model-viewer-stop {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.75rem;
+	z-index: 1;
+	padding: 0.45rem 0.7rem;
+	border: 1px solid var(--accent-dark);
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.92);
+	color: var(--accent-dark);
+	font: 600 0.8rem/1.2 sans-serif;
+	cursor: pointer;
+}
+
+.model-viewer-stop:hover,
+.model-viewer-stop:focus-visible {
+	background: var(--accent-dark);
+	color: #ffffff;
+}
+
+
+.model-viewer.is-loading::after,
+.model-viewer.has-error::after {
+	position: absolute;
+	inset: 50% auto auto 50%;
+	transform: translate(-50%, -50%);
+	color: var(--accent-dark);
+	font: 600 0.95rem/1.4 sans-serif;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.model-viewer.is-loading::after {
+	content: attr(data-loading);
+}
+
+.model-viewer.has-error::after {
+	content: "This 3D model could not be loaded.";
+}
+
+
+
+
+@media (max-width: 600px) {
+	body {
+		padding: 16px 10px;
+	}
+
+	header,
+	main {
+		width: 100%;
+		padding: 22px 18px;
+	}
+
+	.project {
+		padding-left: 14px;
+	}
+
+	.project-gallery {
+		gap: 10px;
+	}
+
+	.project-gallery img {
+		width: calc(50% - 5px);
+		height: 165px;
+	}
+
+	.model-viewer {
+		height: 260px;
+	}
+}

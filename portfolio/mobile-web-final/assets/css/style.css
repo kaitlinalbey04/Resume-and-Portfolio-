@@ -1,0 +1,336 @@
+body {
+
+  padding-top: 56px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #111;
+  color: white;
+
+}
+
+/* NAVBAR */
+
+.navbar {
+
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(6px);
+
+}
+
+.navbar-brand {
+
+  font-family: "Playwrite NO", cursive;
+  font-size: 28px;
+
+}
+
+.nav-link {
+
+  font-size: 18px;
+
+}
+
+/* HERO */
+
+.hero-section {
+
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55));
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+.hero-section h1 {
+
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+}
+
+.hero-section p {
+
+  font-size: 24px;
+
+}
+
+/* ARTIST SECTIONS */
+
+.artist-section {
+
+  min-height: 100vh;
+
+  padding: 120px 20px;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+
+}
+
+/* BACKGROUNDS */
+
+.origins-bg {
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../img/impres.jpg");
+
+}
+
+.monet-bg {
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../img/monet.jpg");
+
+}
+
+.degas-bg {
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../img/degas.jpg");
+
+}
+
+.renoir-bg {
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../img/renoir.jpg");
+
+}
+
+.vangogh-bg {
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../img/vangogh.jpg");
+
+}
+
+.cassatt-bg {
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("../img/cassatt.jpg");
+
+}
+
+/* INFO CARDS */
+
+.card-overlay {
+
+  background-color: rgba(255,255,255,0.90);
+  color: #222;
+
+  border-radius: 16px;
+
+  padding: 40px;
+
+}
+
+.card-overlay h2 {
+
+  font-size: 40px;
+  margin-bottom: 20px;
+
+}
+
+.card-overlay p {
+
+  font-size: 18px;
+  line-height: 1.8;
+
+}
+
+/* FOOTER */
+
+footer {
+
+  background-color: #000;
+  text-align: center;
+  padding: 30px 20px;
+
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+
+  .artist-section,
+  .hero-section {
+    background-attachment: scroll;
+  }
+
+  .hero-section h1 {
+    font-size: 96px;
+  }
+
+}
+
+/* DESKTOP */
+
+@media (min-width: 992px) {
+
+  .hero-section h1 {
+
+    font-size: 128px;
+
+  }
+
+}
+
+/* GALLERY PAGE STYLES */
+
+body.gallery-page {
+  background-color: #000;
+  color: #f2f2f2;
+}
+
+body.gallery-page .lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 1;
+}
+
+body.gallery-page .line {
+  position: relative;
+  width: 1px;
+  height: 100%;
+  overflow: hidden;
+}
+
+body.gallery-page .line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+body.gallery-page .line:nth-child(1)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FF4500 75%, #FF4500 100%);
+  animation-delay: 0.5s;
+}
+
+body.gallery-page .line:nth-child(2)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #32CD32 75%, #32CD32 100%);
+  animation-delay: 1s;
+}
+
+body.gallery-page .line:nth-child(3)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #1E90FF 75%, #1E90FF 100%);
+  animation-delay: 1.5s;
+}
+
+body.gallery-page .line:nth-child(4)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFD700 75%, #FFD700 100%);
+  animation-delay: 2s;
+}
+
+body.gallery-page .line:nth-child(5)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #8A2BE2 75%, #8A2BE2 100%);
+  animation-delay: 2.5s;
+}
+
+body.gallery-page .line:nth-child(6)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #20B2AA 75%, #20B2AA 100%);
+  animation-delay: 3s;
+}
+
+body.gallery-page .line:nth-child(7)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #DC143C 75%, #DC143C 100%);
+  animation-delay: 3.5s;
+}
+
+body.gallery-page .line:nth-child(8)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #00FA9A 75%, #00FA9A 100%);
+  animation-delay: 4s;
+}
+
+body.gallery-page .line:nth-child(9)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FF1493 75%, #FF1493 100%);
+  animation-delay: 4.5s;
+}
+
+body.gallery-page .line:nth-child(10)::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #00BFFF 75%, #00BFFF 100%);
+  animation-delay: 5s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+body.gallery-page .container,
+body.gallery-page .navbar,
+body.gallery-page .card,
+body.gallery-page .row {
+  position: relative;
+  z-index: 2;
+}
+
+body.gallery-page .gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 8px solid #ffffff;
+}
+
+body.gallery-page .card {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3);
+}
+
+body.gallery-page .card a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+body.gallery-page .card a:hover {
+  color: white;
+  background-color: rgba(13, 110, 253, 0.2);
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+  transform: translateY(-2px);
+}
+
+body.gallery-page .card ul {
+  list-style: none;
+  padding: 0;
+}
+
+body.gallery-page .card li {
+  margin-bottom: 10px;
+}
