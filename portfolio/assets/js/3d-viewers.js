@@ -4,6 +4,7 @@ import { STLLoader } from "https://esm.sh/three@0.164.1/examples/jsm/loaders/STL
 
 const viewerElements = document.querySelectorAll(".model-viewer");
 const loader = new STLLoader();
+const modelBaseUrl = "https://media.githubusercontent.com/media/kaitlinalbey04/Resume-and-Portfolio-/main/portfolio/assets/";
 
 viewerElements.forEach((element) => {
   addLaunchButton(element);
@@ -74,7 +75,7 @@ function initializeViewer(element) {
   });
 
   loader.load(
-    `assets/${element.dataset.model}`,
+    `${modelBaseUrl}${encodeURIComponent(element.dataset.model)}`,
     (geometry) => {
       if (isStopped) {
         geometry.dispose();
